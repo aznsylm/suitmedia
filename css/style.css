@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 2000px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.9s ease-in-out, background-color 0.9s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar.transparent {
+    background-color: #f96500;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    filter: brightness(0) invert(1);
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+    padding: 20px 80px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a.active {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.menu a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffd700;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-image: url('../assets/banner.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.banner svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.images {
+    height: 200px;
+
+}
